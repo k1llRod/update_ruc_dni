@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="ir.ui.view" id="update_res_partner_wizard_form">
+        <field name="name">update_res_partner.wizard.form</field>
+        <field name="model">update.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Activar obra">
+                <group>
+                    <h1>
+                        <field name="name" readonly="1"/>
+                    </h1>
+                </group>
+                <group>
+                    <group string="Valores iniciales">
+                        <field name="partner_id" invisible="1" readonly="1"/>
+                        <field name="identification_number" readonly="1"/>
+                        <field name="vat" readonly="1"/>
+                    </group>
+                    <group string="Valores actualizados">
+                        <field name="l10n_latam_identification_type_id" />
+                        <field name="vat_update" />
+                    </group>
+                </group>
+                <footer>
+                    <button name="update_data" string="Actualizar" type="object" class="btn-primary"/>
+<!--                    <button string="Cancel" class="btn-secondary" special="cancel"/>-->
+                </footer>
+            </form>
+        </field>
+    </record>
+
+</odoo>

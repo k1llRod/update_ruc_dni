@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="ir.ui.view" id="view_partner_form_inh">
+        <field name="name">res.partner.view.form.inherit.l10n.pe.vat.inh</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='update_document']" position="after">
+                <button string="Fix form RUC/DNI" type="object" name="update_document_wizard" context="{'force_update':True}" />
+            </xpath>
+
+<!--            <sheet position="before">-->
+<!--                <header>-->
+<!--                    <button string="Update RUC/DNI" type="object" name="update_document" context="{'force_update':True}" />-->
+<!--                </header>-->
+<!--            </sheet>-->
+        </field>
+    </record>
+<!--    <record model="ir.ui.view" id="view_partner_form_inh">-->
+<!--        <field name="name">res.partner.view.form.inherit.l10n.pe.vat.inh</field>-->
+<!--        <field name="model">res.partner</field>-->
+<!--        <field name="inherit_id" ref="base.view_partner_form"/>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <xpath expr="//button[@name='update_document']" position="after">-->
+<!--                <button string="Fix form RUC/DNI" type="object" name="update_document_wizard" context="{'force_update':True}" />-->
+<!--            </xpath>-->
+
+<!--            <sheet position="before">-->
+<!--                <header>-->
+<!--                    <button string="Update RUC/DNI" type="object" name="update_document" context="{'force_update':True}" />-->
+<!--                </header>-->
+<!--            </sheet>-->
+<!--        </field>-->
+<!--    </record>-->
+
+
+</odoo>
